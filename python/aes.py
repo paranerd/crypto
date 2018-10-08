@@ -146,7 +146,7 @@ class My_AES():
         return base64.b64encode(s, altchars=b'-_').decode('utf-8')
 
     def base64_url_decode(self, s):
-        return base64.b64decode(s.encode(), altchars=b'+/')
+        return base64.b64decode(s.encode(), altchars=b'-_')
 
     def sign(self, str, key):
         myhash = HMAC.new(key, digestmod=SHA256)
